@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  user
+  admin
+}
+
+model User {
+  id             String      @id @default(cuid()) // MySQL doesn't use ObjectId, so we'll use cuid or uuid instead
+  name           String?
+  email          String?     @unique
+  emailVerified  Boolean?
+  image          String?
+  hashedPassword String?
+  resetToken     String?
+  resetTokenExpiry DateTime?
+  role           Role        @default(user)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  accounts       Account[]
+}
+
+model Account {
+  id                 String   @id @default(cuid()) // Replace ObjectId with cuid or uuid
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId             String
+
+  @@unique([provider, providerAccountId])
+}
