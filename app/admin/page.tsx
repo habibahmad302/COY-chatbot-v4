@@ -20,7 +20,7 @@ const AdminPage = () => {
   return (
     <div>
       <nav className="border-gray-200 bg-white dark:bg-gray-900">
-        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <div className="ml-4 flex items-center space-x-3 rtl:space-x-reverse">
               <Image
             src="/images/weblogo.png"  // Path relative to the public folder
