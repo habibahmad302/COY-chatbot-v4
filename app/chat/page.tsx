@@ -4,7 +4,6 @@ import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useIsLogedIn } from '../admin/hooks/useIsLogedIn';
 import { Container } from '@chakra-ui/react';
-import ChatWithGemini from '../components/ChatWithGemini';
 
 export default function Chat() {
   // Check if user is logged in | Add redirect logic if needed

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Container } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 // import ChatWithGemini from '../components/ChatWithGemini';
-const ChatWithGemini = dynamic(() => import('../components/ChatWithGemini'), { ssr: false });
+const TraitsChatbot = dynamic(() => import('../components/CoyChatbot'), { ssr: false });
 import Image from 'next/image';
 
 export default function Home() {
@@ -25,7 +25,10 @@ export default function Home() {
               alt="logo"
             />
           </div>
-          <div className="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+          <div
+            className="flex items-center space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse"
+            style={{ marginRight: '20px' }}
+          >
             <Button onClick={() => signOut()}>Logout</Button>
           </div>
           <div
@@ -34,15 +37,9 @@ export default function Home() {
           ></div>
         </div>
       </nav>
-      <Container
-        maxW={'none'}
-        className="App"
-        bgColor={'black'}
-        bgGradient={'linear(to-r, gray.800, blue.700)'}
-        color={'black'}
-      >
-        <ChatWithGemini />
-      </Container>
+      
+        <TraitsChatbot />
+      
     </div>
   );
 }

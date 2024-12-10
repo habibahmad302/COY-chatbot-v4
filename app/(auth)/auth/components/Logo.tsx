@@ -17,7 +17,7 @@ const Logo = () => {
             />
         </a>
         <p className="text-lg font-medium text-gray-600">
-          Welcome to DCA <span className="text-sm">Login first!</span>
+          Welcome to Coy Chatbot <span className="text-sm">Login first!</span>
         </p>
       </div>
     </FadeIn>

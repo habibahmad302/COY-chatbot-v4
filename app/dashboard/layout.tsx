@@ -18,8 +18,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <ChakraProvider theme={theme}>{children}</ChakraProvider>
+        
+       {children}
       </body>
     </html>
   );

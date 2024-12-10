@@ -1,0 +1,7 @@
+.icon {
+  width: 32px;     /* Fixed width */
+  height: 32px;    /* Fixed height */
+  flex-shrink: 0;  /* Prevent shrinking */
+  border-radius: 50%; /* Optional: Round icon */
+}
+    

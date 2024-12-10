@@ -1,5 +1,5 @@
 export const CONFIG = {
-  appTitle: 'Diamond Certificate Analyzer',
+  appTitle: 'Coy Chatbot',
   appDescription: 'description',
   logo: '/weblogo.png',
 };
