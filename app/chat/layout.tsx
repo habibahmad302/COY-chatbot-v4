@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { AuthContext } from '@/context/AutxContext';
 import { ChakraProvider, ColorModeScript, theme } from '@chakra-ui/react';
-import './app.css';
 // import './globals.css';
 // import { CONFIG } from './config';
 
